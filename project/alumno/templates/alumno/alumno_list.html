@@ -26,11 +26,12 @@
             {% endif %}
         </div>
         <div class="col-1">
-            {{ alumno.nombre | capfirst }}
+            {{ alumno.escuela  | capfirst }}
         </div>
         <div class="col-1">
-            ${{ alumno.escuela | floatformat:2 }}
+            {{ alumno.anio| capfirst  }}
         </div>
+       
         <div class="col-5">
         </div>
         <div class="col-1">
@@ -45,7 +46,7 @@
     </div>
 {% endfor %}
 
-<p><a href=" {% url 'alumno:alumno_list' %} " >    Cargar Alumnos </a></p>
+
 <p><a href=" {% url 'home:index' %} " >    Home </a></p>
 
 

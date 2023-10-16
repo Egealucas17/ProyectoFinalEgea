@@ -1,9 +1,15 @@
 from django import forms
 
 from . import models
+from year import models as m
 
 
 class AlumnoForm(forms.ModelForm):
+
+
+    anio = forms.ModelChoiceField(queryset= m.year.objects.all(), to_field_name= "anio" )
+
+
     class Meta:
         model = models.alumno
         fields = "__all__"
@@ -11,7 +17,7 @@ class AlumnoForm(forms.ModelForm):
         widgets = {
             "nombre": forms.TextInput(attrs={"class": "form-control"}),
             "escuela": forms.TextInput(attrs={"class": "form-control"}),
-            "anio": forms.TextInput(attrs={"class": "form-control"}),
+           
         }
 
 

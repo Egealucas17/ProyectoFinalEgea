@@ -8,4 +8,7 @@ class year (models.Model):
     nivel= models.CharField(max_length = 10)
 
     def __str__(self) -> str:
-        return f"{self.anio} ({self.nivel}) "
+        return f"{self.anio}° de {self.nivel} "
+    
+
+    
