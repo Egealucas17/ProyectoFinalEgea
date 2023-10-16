@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    #'alumnos',
+    'year',
+    'alumno',
     #'profesor',
     #'materia',
 ]

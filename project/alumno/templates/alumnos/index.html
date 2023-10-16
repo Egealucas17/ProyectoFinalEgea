@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Menu Alumnos 
+{% endblock title %}
+
+
+{% block content %}
+
+
+</div>
+<div class="col-md-6">
+    <div class="card">
+            <div class="card-body bg-light">
+                <h5 class="card-title" style="text-decoration: none">
+                  Alumnos
+                </h5>
+            </div>
+    </div>
+</div>
+
+<p><a href="{% url 'alumno:alumno_list' %}" style="text-decoration: none"> Acceso</p>
+<p><a href=" {% url 'home:index' %} " >    Home </a></p>
+
+{% endblock content %}

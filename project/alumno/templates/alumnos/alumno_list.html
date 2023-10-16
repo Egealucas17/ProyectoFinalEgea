@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Lista de Alumnos
+{% endblock title %}
+
+{% block content %}
+
+<div class="row mb-4">
+    <div class="col-6">
+        <a href="{% url 'alumno:alumno_create' %}" class="btn btn-success btn-sm ">Crear Alumno</a>
+    </div>
+    <div class="col-6">
+        <form action="" method="get">
+            <input type="text" name="buscar" placeholder="Buscar Alumno">
+        </form>
+    </div>
+</div>
+
+{% for alumno in object_list %}
+    <div class="row mb-2">
+        <div class="col-1">
+            {% if alumno.nombre %}
+                {{ alumno.nombre }}
+            {% else %}
+            {% endif %}
+        </div>
+        <div class="col-1">
+            {{ alumno.nombre | capfirst }}
+        </div>
+        <div class="col-1">
+            ${{ alumno.escuela | floatformat:2 }}
+        </div>
+        <div class="col-5">
+        </div>
+        <div class="col-1">
+            <a href="{% url 'alumno:alumno_detail' alumno.id %}" class="btn btn-secondary btn-sm">Detalle</a>
+        </div>
+        <div class="col-1">
+            <a href="{% url 'alumno:alumno_update' alumno.id %}" class="btn btn-primary btn-sm">Actualizar</a>
+        </div>
+        <div class="col-1">
+            <a href="{% url 'alumno:alumno_delete' alumno.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+        </div>
+    </div>
+{% endfor %}
+
+<p><a href=" {% url 'alumno:alumno_list' %} " >    Cargar Alumnos </a></p>
+<p><a href=" {% url 'home:index' %} " >    Home </a></p>
+
+
+{% endblock content %}

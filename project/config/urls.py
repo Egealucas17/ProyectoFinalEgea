@@ -23,7 +23,7 @@ urlpatterns = [
 
 urlpatterns += [
     path("", include("home.urls")),
-    #path ("alumnos/", include("alumnos.urls")),
+    path ("alumno/", include("alumno.urls")),
     #path ("profesor/", include("profesor.urls")),
     #path ("materia/", include("materia.urls"))
 ]
