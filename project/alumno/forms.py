@@ -7,7 +7,7 @@ from year import models as m
 class AlumnoForm(forms.ModelForm):
 
 
-    anio = forms.ModelChoiceField(queryset= m.year.objects.all(), to_field_name= "anio" )
+    anio = forms.ModelChoiceField(queryset= m.year.objects.all() )
 
 
     class Meta:
