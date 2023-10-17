@@ -47,7 +47,10 @@ INSTALLED_APPS = [
     'year',
     'alumno',
     'profesor',
-    #'materia',
+    'materia',
+    'profesor_materia' ,
+    'nivel'
+    
 ]
 
 MIDDLEWARE = [

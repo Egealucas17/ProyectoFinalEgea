@@ -32,11 +32,14 @@
             <a href="{% url 'profesor:profesor_detail' profesor.id %}" class="btn btn-secondary btn-sm">Detalle</a>
         </div>
         <div class="col-1">
-            <a href="{% url 'profesor:profesor_update' profesor.id %}" class="btn btn-primary btn-sm">Actualizar</a>
+            <a href="{% url 'profesor:profesor_update' profesor.id %}" class="btn btn-primary btn-sm">Actualizar datos</a>
         </div>
+        
         <div class="col-1">
             <a href="{% url 'profesor:profesor_delete' profesor.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+        </div>
         
+
     </div>
 {% endfor %}
 
