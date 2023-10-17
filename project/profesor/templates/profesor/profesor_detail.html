@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Detalle
+{% endblock title %}
+
+{% block content %}
+
+    <ul>
+        <li><strong>Nombre y Apellido: </strong> {{ object.nombre }}</li>
+        <li><strong>Titulo</strong> {{ object.titulo }}
+        <li><strong>Email </strong> {{ object.contacto }}
+        
+        </li>
+    </ul>
+
+    <p><a href=" {% url 'profesor:profesor_list' %} " >    Cargar profesores </a></p>
+    <p><a href=" {% url 'home:index' %} " >    Home </a></p>
+    
+{% endblock content %}

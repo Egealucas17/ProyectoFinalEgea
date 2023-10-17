@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Lista de profesores
+{% endblock title %}
+
+{% block content %}
+
+<div class="row mb-4">
+    <div class="col-6">
+        <a href="{% url 'profesor:profesor_create' %}" class="btn btn-success btn-sm ">Crear profesor</a>
+    </div>
+    <div class="col-6">
+        <form action="" method="get">
+            <input type="text" name="buscar" placeholder="Buscar profesor">
+        </form>
+    </div>
+</div>
+
+{% for profesor in object_list %}
+    <div class="row mb-2">
+        <div class="col-1">
+            {% if profesor.nombre %}
+                {{ profesor.nombre }}
+            {% else %}
+            {% endif %}
+
+        
+        </div>
+       
+        <div class="col-1">
+            <a href="{% url 'profesor:profesor_detail' profesor.id %}" class="btn btn-secondary btn-sm">Detalle</a>
+        </div>
+        <div class="col-1">
+            <a href="{% url 'profesor:profesor_update' profesor.id %}" class="btn btn-primary btn-sm">Actualizar</a>
+        </div>
+        <div class="col-1">
+            <a href="{% url 'profesor:profesor_delete' profesor.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+        
+    </div>
+{% endfor %}
+
+
+<p><a href=" {% url 'home:index' %} " >    Home </a></p>
+
+
+{% endblock content %}

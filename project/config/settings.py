@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'home',
     'year',
     'alumno',
-    #'profesor',
+    'profesor',
     #'materia',
 ]
 
