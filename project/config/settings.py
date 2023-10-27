@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'profesor',
     'materia',
     'profesor_materia' ,
-    'nivel'
+    'nivel',
+    'clase_particular'
     
 ]
 

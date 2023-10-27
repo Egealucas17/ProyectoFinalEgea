@@ -27,7 +27,15 @@
 
 
         </div>
-       
+        <div class="col-1">
+            {{ profesor_materia.materia.descripcion }}
+        </div>
+
+        <div class="col-1">
+            {{ profesor_materia.nivel.descripcion }}
+        </div>
+
+
         <div class="col-1">
             <a href="{% url 'profesor_materia:profesor_materia_update' profesor_materia.id %}" class="btn btn-primary btn-sm">Actualizar datos</a>
         </div>
